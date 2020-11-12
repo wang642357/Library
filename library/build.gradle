@@ -1,0 +1,70 @@
+apply {
+    plugin "com.android.library"
+    plugin "kotlin-android"
+    plugin 'kotlin-kapt'
+}
+apply plugin: 'com.github.panpf.bintray-publish'
+
+android {
+    compileSdkVersion rootProject.ext.android["compileSdkVersion"]
+    buildToolsVersion rootProject.ext.android["buildToolsVersion"]
+
+    defaultConfig {
+        minSdkVersion rootProject.ext.android["minSdkVersion"]
+        targetSdkVersion rootProject.ext.android["targetSdkVersion"]
+        versionCode rootProject.ext.android["versionCode"]
+        versionName rootProject.ext.android["versionName"]
+    }
+
+    lintOptions {
+        abortOnError false
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: "libs", include: ["*.jar"])
+    implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
+    api (rootProject.ext.dependencies["appcompat-androidx"]){
+        exclude module: 'fragment'
+    }
+    api rootProject.ext.dependencies["ktx-core"]
+    api rootProject.ext.dependencies["fragment-ktx"]
+    api rootProject.ext.dependencies["lifecycle-reactivestreams-ktx"]
+    api rootProject.ext.dependencies["okhttp3"]
+    api(rootProject.ext.dependencies["glide"]) {
+        exclude module: 'fragment'
+    }
+    api(rootProject.ext.dependencies["rxandroid2"]) {
+        exclude module: 'rxjava'
+    }
+    api rootProject.ext.dependencies["rxjava2"]
+    api(rootProject.ext.dependencies["autodispose-android-archcomponents"]) {
+        exclude module: 'rxjava'
+        exclude module: 'rxandroid'
+    }
+    api rootProject.ext.dependencies["eventbus"]
+    api (rootProject.ext.dependencies["material"]){
+        exclude module: 'annotation'
+        exclude module: 'appcompat'
+        exclude module: 'fragment'
+    }
+    api rootProject.ext.dependencies["gson"]
+}
+publish {
+    userOrg = 'wjx642357'
+    groupId = 'com.wjx'
+    artifactId = 'library'
+    publishVersion = rootProject.ext.android["versionName"]
+    desc = 'A common development library'
+    website = 'https://github.com/wang642357/JsLibrary'
+}

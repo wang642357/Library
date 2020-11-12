@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="empty_prompt">暂无更多数据</string>
+    <string name="error_prompt">数据加载失败，请点击页面重试</string>
+    <string name="now_loading_prompt">正在加载中…</string>
+    <string name="captcha_verify_access">验证通过,耗时%d毫秒</string>
+    <string name="captcha_verify_failed">验证失败,还剩%d次机会</string>
+    <string name="unread_num_above99">...</string>
+</resources>

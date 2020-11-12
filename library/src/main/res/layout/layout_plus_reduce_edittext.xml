@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal">
+
+    <ImageView
+        android:id="@+id/plus_reduce_edittext_reduce"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:focusable="true"
+        android:clickable="true"
+        android:background="@drawable/reduce_num_selector" />
+
+    <EditText
+        android:id="@+id/plus_reduce_edittext_edit"
+        android:layout_width="wrap_content"
+        android:layout_height="35dp"
+        android:background="@drawable/img_plus_reduce_edittext_bg"
+        android:gravity="center"
+        android:inputType="number"
+        android:textIsSelectable="false"
+        android:textColor="#222222"
+        android:maxLength="2" />
+
+    <ImageView
+        android:id="@+id/plus_reduce_edittext_plus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:focusable="true"
+        android:clickable="true"
+        android:background="@drawable/add_num_selector" />
+
+</LinearLayout>

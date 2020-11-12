@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="immersion_status_bar_view" type="id" />
+    <item name="immersion_navigation_bar_view" type="id" />
+    <item name="immersion_fits_layout_overlap" type="id" />
+    <item name="action_bar_container" type="id" />
+    <!--多布局提示-->
+    <item name="no_network_retry_view" type="id" />
+    <item name="empty_retry_view" type="id" />
+    <!--临时点击时间-->
+    <item name="click_timestamp" type="id" />
+    <item name="click_debounce_action" type="id" />
+</resources>

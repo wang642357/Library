@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="CountDownProgress">
+        <!-- 圆实心的颜色 -->
+        <attr name="circSolidColor" format="color" />
+        <!-- 圆边框的颜色 -->
+        <attr name="circFrameColor" format="color" />
+        <!-- 进度条的颜色 -->
+        <attr name="progressColor" format="color" />
+        <!-- 文字的颜色 -->
+        <attr name="textColor" format="color" />
+        <!-- 文字的大小 -->
+        <attr name="textSize" format="dimension" />
+    </declare-styleable>
+
+    <declare-styleable name="RoundedImageView">
+        <attr name="corner_radius" format="dimension" />
+        <attr name="border_width" format="dimension" />
+        <attr name="border_color" format="color" />
+        <attr name="mask_color" format="color" />
+        <attr name="mutate_background" format="boolean" />
+        <attr name="oval" format="boolean" />
+        <attr name="android:scaleType" />
+        <attr name="label_src" format="reference" />
+        <attr name="label_offsetleft" format="dimension" />
+        <attr name="label_offsettop" format="dimension" />
+        <attr name="label_offsetright" format="dimension" />
+        <attr name="label_offsetbottom" format="dimension" />
+        <attr name="label_visible" format="boolean" />
+        <attr name="label_gravity" format="integer" />
+    </declare-styleable>
+
+    <declare-styleable name="MultipleStatusView">
+        <attr name="loadingView" format="reference" />
+        <attr name="errorView" format="reference" />
+        <attr name="emptyView" format="reference" />
+        <attr name="noNetworkView" format="reference" />
+        <attr name="contentMainView" format="reference" />
+    </declare-styleable>
+
+    <declare-styleable name="TitleBar">
+        <!-- 整体样式 -->
+        <attr name="barStyle">
+            <enum name="light" value="0x10" />
+            <enum name="night" value="0x20" />
+            <enum name="transparent" value="0x30" />
+            <enum name="ripple" value="0x40" />
+        </attr>
+        <!-- 中间 -->
+        <attr name="title" format="string" />
+        <attr name="titleColor" format="color" />
+        <attr name="titleSize" format="dimension" />
+        <attr name="titleGravity">
+            <flag name="top" value="0x30" />
+            <flag name="bottom" value="0x50" />
+            <flag name="left" value="0x03" />
+            <flag name="right" value="0x05" />
+            <flag name="center_vertical" value="0x10" />
+            <flag name="center_horizontal" value="0x01" />
+            <flag name="center" value="0x11" />
+            <flag name="start" value="0x00800003" />
+            <flag name="end" value="0x00800005" />
+        </attr>
+        <!-- 左边 -->
+        <attr name="leftTitle" format="string" />
+        <attr name="leftIcon" format="reference" /><!-- leftIcon 优先于 backButton -->
+        <attr name="backButton" format="boolean" /><!-- 返回按钮（默认开） -->
+        <attr name="leftColor" format="color" />
+        <attr name="leftSize" format="dimension" />
+        <attr name="leftBackground" format="reference|color" />
+        <!-- 右边 -->
+        <attr name="rightTitle" format="string" />
+        <attr name="rightIcon" format="reference" />
+        <attr name="rightColor" format="color" />
+        <attr name="rightSize" format="dimension" />
+        <attr name="rightBackground" format="reference|color" />
+        <!-- 分割线 -->
+        <attr name="lineVisible" format="boolean" />
+        <attr name="lineColor" format="reference|color" />
+        <attr name="lineSize" format="dimension" />
+        <!-- 图标和文字的间距 -->
+        <attr name="android:drawablePadding" />
+    </declare-styleable>
+
+    <declare-styleable name="XEditText">
+        <attr name="x_separator" format="string" />
+        <attr name="x_disableClear" format="boolean" />
+        <attr name="x_clearDrawable" format="reference" />
+        <attr name="x_showPwdDrawable" format="reference" />
+        <attr name="x_hidePwdDrawable" format="reference" />
+        <attr name="x_disableEmoji" format="boolean" />
+        <attr name="x_togglePwdDrawableEnable" format="boolean" />
+        <attr name="x_pattern" format="string" />
+    </declare-styleable>
+
+    <!--滑块验证码-->
+    <declare-styleable name="Captcha">
+        <attr name="src" format="reference" />
+        <attr name="progressDrawable" format="reference" />
+        <attr name="thumbDrawable" format="reference" />
+        <attr name="mode" format="enum">
+            <enum name="mode_bar" value="1" />
+            <enum name="mode_nonbar" value="2" />
+        </attr>
+        <attr name="max_fail_count" format="integer" />
+        <attr name="blockSize" format="dimension" />
+    </declare-styleable>
+
+    <declare-styleable name="MsgView">
+        <!-- 圆角矩形背景色 -->
+        <attr name="mv_backgroundColor" format="color" />
+        <!-- 圆角弧度,单位dp-->
+        <attr name="mv_cornerRadius" format="dimension" />
+        <!-- 圆角弧度,单位dp-->
+        <attr name="mv_strokeWidth" format="dimension" />
+        <!-- 圆角边框颜色-->
+        <attr name="mv_strokeColor" format="color" />
+        <!-- 圆角弧度是高度一半-->
+        <attr name="mv_isRadiusHalfHeight" format="boolean" />
+        <!-- 圆角矩形宽高相等,取较宽高中大值-->
+        <attr name="mv_isWidthHeightEqual" format="boolean" />
+    </declare-styleable>
+
+    <declare-styleable name="SlidingTabLayout">
+        <!-- indicator -->
+        <attr name="tl_indicator_color" format="color" />
+        <attr name="tl_indicator_height" format="dimension" />
+        <attr name="tl_indicator_width" format="dimension" />
+        <attr name="tl_indicator_margin_left" format="dimension" />
+        <attr name="tl_indicator_margin_top" format="dimension" />
+        <attr name="tl_indicator_margin_right" format="dimension" />
+        <attr name="tl_indicator_margin_bottom" format="dimension" />
+        <attr name="tl_indicator_corner_radius" format="dimension" />
+        <attr name="tl_indicator_gravity" format="enum">
+            <enum name="TOP" value="48" />
+            <enum name="BOTTOM" value="80" />
+        </attr>
+        <attr name="tl_indicator_style" format="integer" />
+        <attr name="tl_indicator_width_equal_title" format="boolean" />
+
+        <!-- underline -->
+        <attr name="tl_underline_color" format="color" />
+        <attr name="tl_underline_height" format="dimension" />
+        <attr name="tl_underline_gravity" format="integer" />
+
+        <!-- divider -->
+        <attr name="tl_divider_color" format="color" />
+        <attr name="tl_divider_width" format="dimension" />
+        <attr name="tl_divider_padding" format="dimension" />
+
+        <!-- tab -->
+        <attr name="tl_tab_padding" format="dimension" />
+        <attr name="tl_tab_space_equal" format="boolean" />
+        <attr name="tl_tab_width" format="dimension" />
+
+        <!-- title -->
+        <attr name="tl_textsize" format="dimension" />
+        <attr name="tl_textSelectColor" format="color" />
+        <attr name="tl_textUnselectColor" format="color" />
+        <attr name="tl_selectedTextSize" format="dimension" />
+        <attr name="tl_textBold" format="integer" />
+        <attr name="tl_textAllCaps" format="boolean" />
+
+    </declare-styleable>
+
+    <!--标签-->
+    <declare-styleable name="SlantedView">
+        <attr name="slantedTextSize" format="dimension" />
+        <attr name="slantedBackgroundColor" format="color" />
+        <attr name="slantedText" format="string" />
+        <attr name="slantedTextColor" format="color" />
+        <attr name="slantedLength" format="dimension" />
+        <attr name="slantedMode" format="enum">
+            <enum name="left" value="0" />
+            <enum name="right" value="1" />
+            <enum name="left_bottom" value="2" />
+            <enum name="right_bottom" value="3" />
+            <enum name="left_triangle" value="4" />
+            <enum name="right_triangle" value="5" />
+            <enum name="left_bottom_triangle" value="6" />
+            <enum name="right_bottom_triangle" value="7" />
+        </attr>
+        <attr name="slantedTextStyle" format="enum">
+            <enum name="bold" value="0" />
+            <enum name="italic" value="1" />
+            <enum name="normal" value="2" />
+        </attr>
+    </declare-styleable>
+    <declare-styleable name="SquareLayout">
+        <attr name="SquareLayout_oscAccordTo" format="integer" />
+    </declare-styleable>
+</resources>
