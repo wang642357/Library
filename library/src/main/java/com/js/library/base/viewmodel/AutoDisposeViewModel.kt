@@ -1,7 +1,5 @@
 package com.js.library.base.viewmodel
 
-import android.app.Application
-import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.ViewModel
 import com.uber.autodispose.lifecycle.CorrespondingEventsFunction
 import com.uber.autodispose.lifecycle.LifecycleEndedException
@@ -9,7 +7,7 @@ import com.uber.autodispose.lifecycle.LifecycleScopeProvider
 import io.reactivex.Observable
 import io.reactivex.subjects.BehaviorSubject
 
-open class AutoDisposeViewModel(application: Application) : AndroidViewModel(application),
+open class AutoDisposeViewModel() : ViewModel(),
     LifecycleScopeProvider<AutoDisposeViewModel.ViewModelEvent> {
 
     // Subject backing the auto disposing of subscriptions.

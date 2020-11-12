@@ -22,6 +22,12 @@ allprojects {
         jcenter()
         maven { url 'https://jitpack.io' }
     }
+    //编译时报注释GBK编码错误解决
+    tasks.withType(Javadoc) {
+        options.addStringOption('Xdoclint:none', '-quiet')
+        options.addStringOption('encoding', 'UTF-8')
+        options.addStringOption('charSet', 'UTF-8')
+    }
 }
 
 task clean(type: Delete) {
